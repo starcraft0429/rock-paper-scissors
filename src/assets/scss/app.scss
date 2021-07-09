@@ -1,10 +1,12 @@
-$theme-colors: (
-  'primary': hsl(229, 25%, 31%),
-  'secondary': white,
-);
+@import 'variables';
+@import 'fonts';
+
+@import 'override_bootstrap';
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import 'node_modules/bootstrap-vue/src/index.scss';
+
+@import 'pages/homepage';
 
 #app{
     width: 100vw;
@@ -13,5 +15,8 @@ $theme-colors: (
     color: white;
 }
 
-@import 'font';
-@import 'pages/homepage';
+.child-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
