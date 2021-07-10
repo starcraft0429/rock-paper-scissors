@@ -4,15 +4,25 @@
       <div class="picker-wrapper mx-auto">
         <div class="picker-main">
           <div class="top d-flex align-items-center justify-content-center">
-            <GameButton :button="buttonScissors" />
+            <b-button variant="link" @click="userPick(buttonScissors)">
+              <GameButton :button="buttonScissors" />
+            </b-button>
           </div>
           <div class="middle d-flex align-items-center justify-content-between">
-            <GameButton :button="buttonSpock" />
-            <GameButton :button="buttonPaper" />
+            <b-button variant="link" @click="userPick(buttonSpock)">
+              <GameButton :button="buttonSpock" />
+            </b-button>
+            <b-button variant="link" @click="userPick(buttonPaper)">
+              <GameButton :button="buttonPaper" />
+            </b-button>
           </div>
           <div class="bottom d-flex align-items-center justify-content-between">
-            <GameButton :button="buttonLizard" />
-            <GameButton :button="buttonRock" />
+            <b-button variant="link" @click="userPick(buttonLizard)">
+              <GameButton :button="buttonLizard" />
+            </b-button>
+            <b-button variant="link" @click="userPick(buttonRock)">
+              <GameButton :button="buttonRock" />
+            </b-button>
           </div>
         </div>
       </div>
@@ -21,6 +31,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import GameButton from "@/components/GameButton.vue";
 import {
   buttonRock,
@@ -41,6 +52,9 @@ export default {
       buttonLizard: buttonLizard,
       buttonSpock: buttonSpock,
     };
+  },
+  methods: {
+    ...mapActions("common", ["userPick"]),
   },
 };
 </script>

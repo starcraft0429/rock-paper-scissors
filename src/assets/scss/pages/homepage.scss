@@ -102,12 +102,12 @@ footer {
         padding-top: 1rem;
       }
       .middle {
-        margin-top: -1rem;
+        margin-top: -2rem;
       }
       .bottom {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 1rem;
+        margin-top: 0rem;
         width: 70%;
       }
       @include media-breakpoint-up(xl) {
@@ -120,7 +120,7 @@ footer {
         .bottom {
           margin-left: auto;
           margin-right: auto;
-          margin-top: 3rem;
+          margin-top: 2rem;
           width: 70%;
         }
       }
@@ -132,9 +132,15 @@ footer {
   &.win {
     border-radius: 50%;
     box-shadow: 
-      0 0 0 20px rgba(#fff, 0.06),
+      0 0 0 30px rgba(#fff, 0.06),
       0 0 0 60px rgba(#fff, 0.04),
       0 0 0 90px rgba(#fff, 0.02);
+    @include media-breakpoint-up(xl) {
+      box-shadow: 
+        0 0 0 80px rgba(#fff, 0.06),
+        0 0 0 160px rgba(#fff, 0.04),
+        0 0 0 240px rgba(#fff, 0.02);
+    }
   }
   .button-outer {
     width: $button-mobile-sm;
@@ -187,8 +193,8 @@ footer {
       box-shadow: inset 0px -8px 0px 0px rgb(0 0 0 / 35%);
     }
     .button-inner {
-      width: $button-mobile-xl - 25px;
-      height: $button-mobile-xl - 25px;
+      width: $button-mobile-xl - 30px;
+      height: $button-mobile-xl - 30px;
       @include media-breakpoint-up(xl) {
         width: $button-desktop-xl - 60px;
         height: $button-desktop-xl - 60px;

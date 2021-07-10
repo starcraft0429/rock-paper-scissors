@@ -4,6 +4,7 @@ export const getInitialState = () => {
     waiting: true,
     user: null,
     house: null,
+    result: null,
   };
 };
 
