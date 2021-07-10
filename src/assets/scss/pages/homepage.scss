@@ -144,7 +144,6 @@ footer {
     @include media-breakpoint-up(xl) {
       width: $button-desktop-sm;
       height: $button-desktop-sm;
-      box-shadow: inset 0px -8px 0px 0px rgb(0 0 0 / 35%);
     }
     .button-inner {
       width: $button-mobile-sm - 20px;
@@ -155,7 +154,7 @@ footer {
       @include media-breakpoint-up(xl) {
         width: $button-desktop-sm - 30px;
         height: $button-desktop-sm - 30px;
-        box-shadow: inset 0px 8px 0px 0px rgb(0 0 0 / 25%);
+        // box-shadow: inset 0px 6px 0px 0px rgb(0 0 0 / 25%);
       }
       img {
         width: 40px;
@@ -185,6 +184,7 @@ footer {
     @include media-breakpoint-up(xl) {
       width: $button-desktop-xl;
       height: $button-desktop-xl;
+      box-shadow: inset 0px -8px 0px 0px rgb(0 0 0 / 35%);
     }
     .button-inner {
       width: $button-mobile-xl - 25px;
@@ -192,6 +192,7 @@ footer {
       @include media-breakpoint-up(xl) {
         width: $button-desktop-xl - 60px;
         height: $button-desktop-xl - 60px;
+        box-shadow: inset 0px 8px 0px 0px rgb(0 0 0 / 35%);
       }
       img {
         width: 50px;

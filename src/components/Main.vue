@@ -1,6 +1,6 @@
 <template>
   <div class="main w-100">
-    <Picker v-if="false" />
+    <Picker v-if="waiting" />
     <div v-else class="game-w w-100">
       <div class="picked-w mb-5 w-100 child-center">
         <div class="d-flex flex-column align-items-center mx-4 mx-xl-5">
@@ -25,21 +25,21 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Picker from "@/components/Picker.vue";
 import GameButton from "@/components/GameButton.vue";
 import Rusult from "@/components/Result.vue";
-import { buttonRock } from "@/constants.js";
 export default {
   components: {
     Picker,
     GameButton,
     Rusult,
   },
+  computed: {
+    ...mapState("common", ["waiting", "user", "house"]),
+  },
   data() {
-    return {
-      user: buttonRock,
-      house: null,
-    };
+    return {};
   },
 };
 </script>

@@ -32,9 +32,19 @@
           "
         >
           <div class="text text-uppercase">Score</div>
-          <div class="score">12</div>
+          <div class="score">{{ score }}</div>
         </div>
       </div>
     </b-container>
   </section>
 </template>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  name: "Header",
+  computed: {
+    ...mapState("common", ["score"]),
+  },
+};
+</script>
