@@ -21,8 +21,8 @@
           </h6>
         </div>
       </div>
-      <div class="win-status-w">
-        <Rusult v-if="result !== null" class="d-flex d-sm-flex d-xl-none" />
+      <div class="win-status-w d-flex d-sm-flex d-xl-none">
+        <Rusult v-if="result !== null" />
       </div>
     </div>
   </div>
