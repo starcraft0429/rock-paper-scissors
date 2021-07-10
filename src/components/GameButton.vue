@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="button" class="button-wrapper win">
+    <div v-if="button" class="button-wrapper">
       <div class="button-outer child-center" :style="bgStyle">
         <div class="button-inner child-center">
           <img

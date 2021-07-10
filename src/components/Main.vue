@@ -1,37 +1,39 @@
 <template>
   <div class="main w-100">
-    <!-- <Picker /> -->
-    <div class="picked-w w-100">
-      <div class="mb-5 d-flex w-100 align-items-center justify-content-around">
-        <div class="d-flex flex-column align-items-center">
-          <div class="button-container">
+    <Picker v-if="false" />
+    <div v-else class="game-w w-100">
+      <div class="picked-w mb-5 w-100 child-center">
+        <div class="d-flex flex-column align-items-center mx-4 mx-xl-5">
+          <div class="button-container order-0 order-xl-1">
             <GameButton :button="user" />
           </div>
-          <div class="my-4 text-uppercase">You picked</div>
+          <h6 class="my-4 text-uppercase order-1 order-xl-0">You picked</h6>
         </div>
-        <div class="d-flex flex-column align-items-center">
-          <div class="button-container">
+        <Rusult v-if="false" class="mx-5 d-none d-xl-flex" />
+        <div class="d-flex flex-column align-items-center mx-4 mx-xl-5">
+          <div class="button-container order-0 order-xl-1">
             <GameButton :button="house" />
           </div>
-          <div class="my-4 text-uppercase">The house picked</div>
+          <h6 class="my-4 text-uppercase order-1 order-xl-0">
+            The house picked
+          </h6>
         </div>
       </div>
-      <div class="win-status">
-        <h1 class="text-uppercase">You win</h1>
-        <b-button size="lg" block variant="secondary">PLAY AGAIN</b-button>
-      </div>
+      <Rusult class="d-flex d-sm-flex d-xl-none" />
     </div>
   </div>
 </template>
 
 <script>
-// import Picker from "@/components/Picker.vue";
+import Picker from "@/components/Picker.vue";
 import GameButton from "@/components/GameButton.vue";
+import Rusult from "@/components/Result.vue";
 import { buttonRock } from "@/constants.js";
 export default {
   components: {
-    // Picker,
+    Picker,
     GameButton,
+    Rusult,
   },
   data() {
     return {

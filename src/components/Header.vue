@@ -1,5 +1,5 @@
 <template>
-  <section class="header-section w-100 pt-4">
+  <section class="header-section w-100">
     <b-container>
       <div
         class="
@@ -10,12 +10,13 @@
           p-3
         "
       >
-        <div class="text-w">
-          <div class="text-uppercase">Rock</div>
-          <div class="text-uppercase">Paper</div>
-          <div class="text-uppercase">Scissors</div>
-          <div class="text-uppercase">Lizard</div>
-          <div class="text-uppercase">Spock</div>
+        <div class="logo-w">
+          <a href="/">
+            <img
+              :src="require('@/assets/images/logo-bonus.svg')"
+              alt="logo-bonus"
+            />
+          </a>
         </div>
         <div
           class="
@@ -27,7 +28,7 @@
             d-flex
             flex-column
             align-items-center
-            justify-content-between
+            justify-content-around
           "
         >
           <div class="text text-uppercase">Score</div>

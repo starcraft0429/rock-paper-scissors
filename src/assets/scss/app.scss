@@ -1,10 +1,10 @@
-@import 'variables';
-@import 'fonts';
+@import "variables";
+@import "fonts";
 
-@import 'override_bootstrap';
+@import "override_bootstrap";
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import 'node_modules/bootstrap-vue/src/index.scss';
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap-vue/src/index.scss";
 
-@import 'custom';
-@import 'pages/homepage';
+@import "custom";
+@import "pages/homepage";

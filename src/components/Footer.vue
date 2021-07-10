@@ -1,6 +1,6 @@
 <template>
   <footer class="">
-    <div class="button-w child-center">
+    <div class="rules-button-w">
       <b-button variant="outline-secondary" v-b-modal="'rules-modal'">
         RULES
       </b-button>
