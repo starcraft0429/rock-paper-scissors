@@ -13,8 +13,7 @@ export default {
     state.result = value;
   },
   updateScore(state, value) {
-    let score = state.score + value;
-    state.score = Math.max(score, 0);
+    state.score = state.score + value;
   },
   reset(state) {
     const initialState = getInitialState();
